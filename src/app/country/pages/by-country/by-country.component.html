@@ -16,9 +16,9 @@
 </div>
 
 <hr />
-<div class="alert alert-danger">No results were found for this term.</div>
+<div  *ngIf="thereIsError" class="alert alert-danger">No results were found for this term {{term}}.</div>
 
-<div class="row">
+<div *ngIf="countries.length > 0" class="row">
   <div class="col">
     <table class="table table-hover">
       <thead>
@@ -31,13 +31,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Flag</td>
-          <td>Colombia</td>
-          <td>15642485</td>
+        <tr *ngFor="let country of countries; let i = index" >
+          <td>{{ i + 1}}</td>
           <td>
-            <a href="/country/">View...</a>
+            <img  class="small-flag" [src]="country.flags.svg" alt="image">
+          </td>
+          <td>{{ country.name.common }}</td>
+          <td>{{country.population | number}}</td>
+          <td>
+            <a [routerLink]="['/country', country.cioc]">View...</a>
           </td>
         </tr>
       </tbody>
