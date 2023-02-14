@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: '**', //? se coloca ** para indicar cualquier ruta que no sea las anteriomente puestas
     redirectTo: '',
-  },
+  }
+
 ];
 
 @NgModule({

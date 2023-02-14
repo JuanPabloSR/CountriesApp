@@ -1,57 +1,60 @@
-<div *ngIf="!country; else divCountry" class="alert alert-info">
-  Please wait...
-</div>
-
-<ng-template #divCountry>
-  <div class="row">
-    <div class="col-12">
-      <h1>
-        Country: <small>{{ country.name.common }}</small>
-      </h1>
-    </div>
+<div class="animate__animated animate__fadeIn animate__faster">
+  <div *ngIf="!country; else divCountry" class="alert alert-info">
+    Please wait...
   </div>
 
-  <div class="row">
-    <div class="col-4">
-      <h3>Bandera</h3>
-      <img [src]="country.flags.svg" alt="img flag" class="img-thumbnail" />
-    </div>
-
-    <div class="col">
-      <h3>Information</h3>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <strong>Capital</strong> {{ country.capital }}
-        </li>
-        <li class="list-group-item">
-          <strong>Population</strong> {{ country.population | number }}
-        </li>
-        <li class="list-group-item">
-          <strong>Time Zone</strong> {{ country.timezones}}
-        </li>
-        <li class="list-group-item">
-          <strong>Continent</strong> {{ country.continents }}
-        </li>
-        <li class="list-group-item">
-          <strong>Start of week</strong> {{ country.startOfWeek }}
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h3>Translations</h3>
-      <div class="row">
-        <div class="col">
-          <span class="badge bg-primary me-3">{{ country.translations['spa'].official }}</span>
-          <span class="badge bg-primary me-3">{{ country.translations['ara'].official }}</span>
-          <span class="badge bg-primary me-3">{{ country.translations['cym'].official }}</span>
-          <span class="badge bg-primary me-3">{{ country.translations['deu'].official }}</span>
-          <span class="badge bg-primary me-3">{{ country.translations['est'].official }}</span>
-          <span class="badge bg-primary me-3">{{ country.translations['fra'].official }}</span>
-        </div>
+  <ng-template #divCountry>
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Country: <small>{{ country.name.common }}</small>
+        </h1>
       </div>
     </div>
 
+    <div class="row animate__animated animate__fadeIn animate__faster">
+      <div class="col-4">
+        <h3>Bandera</h3>
+        <img [src]="country.flags.svg" alt="img flag" class="img-thumbnail" />
+      </div>
 
-  </div>
-</ng-template>
+      <div class="col">
+        <h3>Information</h3>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Capital</strong> {{ country.capital }}
+          </li>
+          <li class="list-group-item">
+            <strong>Population</strong> {{ country.population | number }}
+          </li>
+          <li class="list-group-item">
+            <strong>Time Zone</strong> {{ country.timezones}}
+          </li>
+          <li class="list-group-item">
+            <strong>Continent</strong> {{ country.continents }}
+          </li>
+          <li class="list-group-item">
+            <strong>Start of week</strong> {{ country.startOfWeek }}
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Translations</h3>
+        <div class="row">
+          <div class="col">
+            <span class="badge bg-primary me-3">{{ country.translations['spa'].official }}</span>
+            <span class="badge bg-primary me-3">{{ country.translations['ara'].official }}</span>
+            <span class="badge bg-primary me-3">{{ country.translations['cym'].official }}</span>
+            <span class="badge bg-primary me-3">{{ country.translations['deu'].official }}</span>
+            <span class="badge bg-primary me-3">{{ country.translations['est'].official }}</span>
+            <span class="badge bg-primary me-3">{{ country.translations['fra'].official }}</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </ng-template>
+
+</div>
