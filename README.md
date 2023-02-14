@@ -1,5 +1,12 @@
 # CountriesApp
 
+Project to consume the api of RestCountries v3, (https://restcountries.com/) to query information of all countries, search by region, capital and display the corresponding information.
+
+Deploy: https://countrysappangular.netlify.app/
+
+![countriesApp](https://user-images.githubusercontent.com/62584398/218871389-4bbb72c2-08b0-4bb4-81b2-f9e2e71bb8e6.gif)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
